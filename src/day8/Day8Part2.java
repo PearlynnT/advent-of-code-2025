@@ -23,7 +23,7 @@ public class Day8Part2 {
         }
         Collections.sort(connections);
         UnionFind uf = new UnionFind(points.size());
-        int result = 0;
+        long result = 0;
         for (Connection c: connections) {
             uf.union(c.p1, c.p2);
             if (uf.getNumDisjoint() == 1) {
